@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   end
 
   devise_for :users, :controllers => {
+    # syntax means for registrations go to milia/registrations controller...
     :registrations => "milia/registrations",
     :confirmations => "confirmations",
     :sessions => "milia/sessions",
