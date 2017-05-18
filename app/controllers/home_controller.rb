@@ -1,7 +1,5 @@
 class HomeController < ApplicationController
-
-  # this means that the user doesnt have to be logged in to view the index
-  skip_before_action :authenticate_tenant!, :only => [:index]
+  skip_before_action :authenticate_tenant!, :only => [ :index ]
 
   def index
     if current_user
@@ -13,6 +11,8 @@ class HomeController < ApplicationController
 
       @tenant = Tenant.current_tenant
       params[:tenant_id] = @tenant.id
+
     end
   end
+
 end

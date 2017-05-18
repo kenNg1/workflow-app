@@ -1,16 +1,16 @@
- # OPTIONAL: Use this as a template for changing milia configuration
+# OPTIONAL: Use this as a template for changing milia configuration
 # put it in your config/initializers directory
 # values shown below are the defaults in milia
 Milia.setup do |config|
 
 # true if you wish to use a coupon-based option in your sign-up form
 # false to otherwise not expect a coupon attribute in the parameters
-  config.use_coupon = false
+  config.use_coupon = true
 
 # true if you use recaptcha on your sign-up form;
   # be sure to include the gem 'recaptcha' in your Gemfile
 # false if you do not
-  config.use_recaptcha = false
+  config.use_recaptcha = true
 
 # true if action after signing out is to return to the home (root) page
 # false to return to the sign-in form (devise default)
@@ -34,7 +34,7 @@ Milia.setup do |config|
   # allows an app to expand the permitted attribute list
   # specify each attribute as a symbol
   # example: [:name]
-  # config.whitelist_tenant_params = []
+  config.whitelist_tenant_params = [:plan]
 
   # whitelist coupon params list
   # allows an app to expand the permitted attribute list
