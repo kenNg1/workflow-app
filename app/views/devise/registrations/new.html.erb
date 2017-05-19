@@ -17,7 +17,7 @@
         <%= f.label :password_confirmation %>
         <%= f.password_field :password_confirmation, class: 'form-control' %>
       </div>
-      <%= fields_for (:tenant) do |w| %>
+      <%= fields_for(:tenant) do |w| %>
         <div class="form-group col-md-6 no-left-padding">
           <%= w.label :name, 'Organisation' %>
           <span class="description"><i>Unique name for your group or organisation for the new account</i></span>
